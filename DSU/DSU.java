@@ -25,7 +25,7 @@ class DSU {
 		// compare only if roots are different
         if(rootI != rootJ) {
             if(size[rootI] >= size[rootJ]) {
-                parent[rootJ] = parent[rootI];
+                parent[rootJ] = rootI;
                 size[rootI] += size[rootJ];
             } else {
                 parent[rootI] = rootJ;
