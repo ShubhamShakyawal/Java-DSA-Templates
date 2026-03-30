@@ -4,7 +4,7 @@ class DSU {
 
     public int find(int x ) {
         if(parent[x] == x) return x;
-	// path compression
+		// path compression
         return parent[x] = find(parent[x]);
     }
 
@@ -12,7 +12,7 @@ class DSU {
         int rootI = find(i);
         int rootJ = find(j);
 
-	// compare only if roots are different
+		// compare only if roots are different
         if(rootI != rootJ) {
             if(size[rootI] >= size[rootJ]) {
                 parent[rootJ] = parent[rootI];
